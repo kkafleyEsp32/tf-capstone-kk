@@ -9,8 +9,8 @@ module "Vms_app1" {
   subnets = ["subnet-0a413d769fe98ba0b", "subnet-043f1f8151b681cca", "subnet-04f47a3252bdf06e6"]
   #Security_group = module.Security_group.op_sg_id
   web_sg = [module.Web_SG01.web_sg_id]
-  num_of_vm = 1
-  env = "dev"
+  num_of_vm = var.num_of_vm
+  env = var.env
   user_data = file("scripts/nginx.sh")
 }
 
