@@ -15,7 +15,7 @@ module "Vms_app1" {
 
 module "Web_SG01" {
   source = "git::https://github.com/Vishwanathms/tf-aws-modules-jan26.git//security-groups?ref=main"
-  project = "vishwa"
+  project = "Kishor"
   vpc_id = data.aws_vpc.default.id
 }
  
