@@ -26,3 +26,5 @@ data "aws_vpc" "default" {
 output "vm_private_ips01" {
   value = module.Vms_app1.vm_priv_pips
 }
+
+user_data = file("scripts/nginx.sh")
